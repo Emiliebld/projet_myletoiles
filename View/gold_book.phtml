@@ -1,0 +1,59 @@
+
+<main>
+    <div class="temoignage-all">
+        <p>Parce qu'un retour de votre part fait toujours plaisir,</br>je t'invite à poster ici ton âme d'artiste...</p>
+    
+        <div class="temoignage">
+            <pre class="temoignage1"><p>"Très jolies réalisations,
+            je penses qu'elle va réveiller
+            beaucoup de petits artistes."
+            ...Louise...</p></pre>
+        
+            <pre class="temoignage2"><p>"Nous avons enfin fait 
+            l'acquisition d'une de vos toile! 
+            Merci pour l'accueil."
+            ...Aurélie...</p></pre>
+            
+            <pre class="temoignage3"><p>"Nous avons enfin fait 
+            l'acquisition d'une de vos toile! 
+            Merci pour l'accueil."
+            ...Aurélie...</p></pre>
+        </div>
+    </div>
+    
+    <div class="form-gold-book">
+        <form action="gold_book.phtml" method="POST">
+            <fieldset>
+                <legend>Login</legend>
+                
+                <div class="field">
+                    <label for="firstname">Prénom</label>
+                    <div class="case">
+                        <input type="text" v-model="firstname" id="firstname">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="email">Mail</label>
+                    <div class="case">
+                        <input type="email" v-model="email" id="email">
+                    </div>
+                </div class="textarea">
+                    <p>J'écris mon message ...</p>
+                    <textarea name=></textarea>
+                <div class="btn">
+                    <button type="submit">Envoyer</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</main>
+
+
+    <?php 
+    if(isset($_POST['firstname']) && isset($_POST['email'])){
+        echo $_POST['firstname'];
+        echo'<br/>';
+        echo $_POST['email'];
+    }
+    ?>
+    
