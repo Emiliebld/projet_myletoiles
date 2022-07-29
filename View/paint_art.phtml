@@ -5,60 +5,30 @@
     
     
     <main class="paint-art">
-		<article>
-				<img class="img-left" src="pictures/colors.jpg" alt="feu d'artifice de couleurs">
-			<div class="art1">
-				<h2>"Feu d'artifice d'artifices"</h2>
-				<p>J'ai commencé à me prendre de passion pour les arts créatifs à 2 ans et demi et ceci est la toute première peinture que j'ai réalisé. Sans inspiration particulière vu de l'extérieur, j'étais déjà dans mon univers et je savais très bien ce que je faisais.</p>
-				<p>Outils utilisés : les mains et éponges.</p>
-			</div>
-			<div class="clear"></div>
-		</article>
-		<article>
-				<img class="img-right" src="pictures/arbreDeVie.jpg" alt="arbre de vie noir/or">
-			<div class="art2">
-				<h2>"Arbre de la Luciole"</h2>
-				<p>J'ai voulu réalisé quelque chose de différent avec un thème plus ou moins imposé, noir et or. Le côté sombre fait ressortir les couleurs quelqu'elles soient et le rendu devient très lumineux.</p>
-				<p>Outils utilisés : pinceaux et fleur de douche.</p>
-			</div>
-			<div class="clear"></div>
-		</article>
-		<article>
-				<img class="img-left" src="pictures/vert.jpg" alt="vert patagé par des liserets noirs">
-			<div class="art3">
-				<h2>"Rivière"</h2>
-				<p>Total vert sur ce tableau. J'ai débuté par des risières noires que j'ai ensuite rempli par différentes palettes de verts. J'aurais très bien pu faire l'inverse en mettant des toucges de vert sur toute la toile puis délimiter par de larges traits noirs.</p>
-				<p>Outils utilisés : pinceaux.</p>
-			</div>
-			<div class="clear"></div>
-		</article>
-		<article>
-				<img class="img-right" src="pictures/foret.jpg" alt="forêt automnale violacée">
-			<div class="art4">
-				<h2>"Forêt pourpre"</h2>
-				<p>Ici j'ai voulu passé à une étape supérieur en therme de concret en réalisant un paysage. Je me suis inspirée de tutoriels en appliquant des goutes de peinture à différents endroits de la toile, puis j'ai étaler et relié chaque couleur étape par étape avec différents outils pour arriver à ce paysage.</p>
-				<p>Outils utilisés : pinceaux, éponges, grattoir.</p>
-			</div>
-			<div class="clear"></div>
-		</article>
-		<article>
-				<img class="img-left" src="pictures/orange.jpg" alt="mélimélo de couleurs pailletées">
-			<div class="art5">
-				<h2>"Nuage Arc-en-ciel"</h2>
-				<p>Ici nous avons un mélange de couleurs chaudes pour en faire une toile abstraite. Je suis très inspirée par l'abstrait, qui contrairement à ce que l'on pourrait croire, déborde d'imagination et de créativité.</p>
-				<p>Outils utilisés : les mains, éponges et pinceaux.</p>
-			</div>
-			<div class="clear"></div>
-		</article>
-		<article>
-				<img class="img-right" src="pictures/ciel.jpg" alt="scène champêtre, panier de paille, ciel bleu, nuages">
-			<div class="art6">
-				<h2>"Panier Volant"</h2>
-				<p>Le tout dernier tableau que j'ai réalisé sur un coup de tête, comme tous mes tableaux d'ailleurs!!!Le soleil arrive et une envie de couleurs et de fraicheur sur une toile neutre.</p>
-				<p>Outils utilisés : pinceaux, éponges, tampons.</p>
-			</div>
-			<div class="clear"></div>
-		</article>
+    	<!--boucle foreach pour boucler sur la liste des oeuvres et les afficher-->
+    	<?php $i=1; ?>
+    	<?php foreach($oeuvres as $oeuvre):?>
+    	
+    	
+	    	<article>
+	    		<a href="public/pictures/<?=htmlspecialchars($oeuvre['name_image'])?>" target="_blank">
+					<img class="picture_oeuvre img-<?php if($i==1){echo 'left';} else{echo 'right';}?>" 
+						src="public/pictures/<?=htmlspecialchars($oeuvre['name_image'])?>" alt="<?=htmlspecialchars($oeuvre['name_image'])?>">
+				</a>
+				<div class="oeuvre">
+					<h2><?=htmlspecialchars($oeuvre['title'])?></h2>
+					<p><?=htmlspecialchars($oeuvre['description'])?></p>
+					<p class="outils"><strong>Outils utilisés</strong> : <?=htmlspecialchars($oeuvre['outil'])?></p>
+				</div>
+				<div class="clear"></div>
+			</article>
+		<?php $i++; ?>
+		<?php if ($i==3){
+			$i=1;
+		}?>
+    	<?php endforeach;?>
+    	
+    
 	</main>
     
     

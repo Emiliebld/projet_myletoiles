@@ -4,56 +4,45 @@
         <p>Parce qu'un retour de votre part fait toujours plaisir,</br>je t'invite à poster ici ton âme d'artiste...</p>
     
         <div class="temoignage">
-            <pre class="temoignage1"><p>"Très jolies réalisations,
-            je penses qu'elle va réveiller
-            beaucoup de petits artistes."
-            ...Louise...</p></pre>
-        
-            <pre class="temoignage2"><p>"Nous avons enfin fait 
-            l'acquisition d'une de vos toile! 
-            Merci pour l'accueil."
-            ...Aurélie...</p></pre>
+            <!--boucle foreach pour boucler sur les messages et les afficher-->
+            <?php foreach($livredor as $message):?>
             
-            <pre class="temoignage3"><p>"Nous avons enfin fait 
-            l'acquisition d'une de vos toile! 
-            Merci pour l'accueil."
-            ...Aurélie...</p></pre>
+            <pre class="temoignage1">
+                <p>-<strong><?=htmlspecialchars($message['username'])?></strong>-</p>
+                <p>"<?=htmlspecialchars($message['message'])?>"</p>
+                <p><?=htmlspecialchars($message['date_message'])?></p>
+            </pre>
+        <?php endforeach;?>
         </div>
     </div>
+            
+    <?php if(isset($_SESSION['logged']) && $_SESSION['logged'] == true): ?>
     
-    <div class="form-gold-book">
-        <form action="gold_book.phtml" method="POST">
-            <fieldset>
-                <legend>Login</legend>
-                
-                <div class="field">
-                    <label for="firstname">Prénom</label>
-                    <div class="case">
-                        <input type="text" v-model="firstname" id="firstname">
+        <div class="form-gold-book">
+            
+            <form action="index.php?page=submitForm" method="POST">
+                <fieldset>
+                    <legend>Login</legend>
+                    <?php
+                        //si le tableau d'erreur existe et qu'il n'est pas vide, alors on va boucler sur les erreurs pour les afficher une par une
+                        if(isset($errors) && count($errors)>0){
+                            foreach ($errors as $error){
+                                echo $error."</br>";
+                            }
+                        }
+                    ?>
+                    <div class="textarea">
+                        <p>J'écris mon message ...</p>
+                        <textarea name="msg"></textarea>
                     </div>
-                </div>
-                <div class="field">
-                    <label for="email">Mail</label>
-                    <div class="case">
-                        <input type="email" v-model="email" id="email">
+                    <div class="btn">
+                        <button type="submit">Envoyer</button>
                     </div>
-                </div class="textarea">
-                    <p>J'écris mon message ...</p>
-                    <textarea name=></textarea>
-                <div class="btn">
-                    <button type="submit">Envoyer</button>
-                </div>
-            </fieldset>
-        </form>
+                </fieldset>
+            </form>
+            
+            <?php else: ?>
+        <?php endif; ?>
+        
     </div>
 </main>
-
-
-    <?php 
-    if(isset($_POST['firstname']) && isset($_POST['email'])){
-        echo $_POST['firstname'];
-        echo'<br/>';
-        echo $_POST['email'];
-    }
-    ?>
-    

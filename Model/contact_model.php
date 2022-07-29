@@ -1,6 +1,5 @@
 <?php
 
-
 $input = [
 
     "prenom" => [
@@ -8,7 +7,7 @@ $input = [
             "required" => true, // facultatif
             "label" => "Votre prenom", // facultatif
             "maxlength" => 50, // facultatif
-            'required' => true,
+    'required' => true,
     ],
     "email" => [
             "type" => "email",
@@ -25,8 +24,8 @@ $input = [
             "maxlength" => 300, // facultatif
             'required' => true,
     ],
-    "button" => [
-            "type" => "submit",
+   "button" => [
+           "type" => "submit",
             "value" => "Valider",
     ],
 ];

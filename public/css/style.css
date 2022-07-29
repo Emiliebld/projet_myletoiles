@@ -1,0 +1,702 @@
+/*darkmode->mal voyant*/
+
+/* *****************************************************************
+                          GENERALITIES
+********************************************************************/
+
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    border: 1px solid grey;
+}
+
+h1 {
+    max-width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Parisienne', cursive;
+    font-weight: normal;
+    font-size: 5em;
+}
+
+h2 {
+    margin-top: 3rem;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    color: grey;
+    text-align: center;
+    margin: 10px;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.sucess {
+    border: 1px solid black;
+}
+
+/* *****************************************************************
+                          NAVBAR
+********************************************************************/
+
+a {
+    text-decoration: none;
+}
+
+.navbar a {
+    margin: 0 0.625rem;
+    font-size: 1.375rem;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+a.close {
+    display: none;
+}
+
+.navbar a:active {
+    /* Quand le visiteur sélectionne le lien */
+    color: black;
+}
+
+.navbar a:hover {
+    /*souligner au survol*/
+    color: black;
+    text-decoration: underline;
+}
+
+.navbar ul {
+    background: radial-gradient(#EFE6F3, #B5A3BC);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.navbar li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    color: grey;
+    font-family: 'Dancing Script', cursive;
+    padding: 1.25rem;
+}
+
+.logo {
+    display: flex;
+    color: grey;
+    font-family: 'Dancing Script', cursive;
+    border: 1px grey;
+    border-radius: 0.625rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+
+/* *****************************************************************
+                          HOME_PAGE
+********************************************************************/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.picture-homepage {
+
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+/* *****************************************************************
+                          PRESENTATION
+********************************************************************/
+
+.presentation-galerie {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.presentation-galerie p {
+    font-family: 'Handlee', cursive;
+}
+
+div .image {
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: .5s ease-in-out;
+}
+
+div:hover .image {
+    filter: grayscale(0);
+}
+
+.galerie-grid .box {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+}
+
+.galerie-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    width: 75%;
+    height: auto;
+    padding-left: 8rem;
+}
+
+.img4 {
+    grid-area: 1 / 2 / 4 / 4;
+    padding-top: 5rem;
+}
+
+.img3 {
+    grid-area: 3 / 3 / 5 / 6;
+}
+
+.img1 {
+    grid-area: 4 / 1 / 6 / 4;
+    padding-top: 2rem;
+}
+
+.img2 {
+    grid-area: 5 / 3 / 8 / 5;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+}
+
+.img6 {
+    grid-area: 4 / 6 / 6 / 9;
+    padding-bottom: 3rem;
+}
+
+.img5 {
+    grid-area: 5 / 5 / 7 / 8;
+    padding-left: 1rem;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+blockquote p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    padding-top: 2rem;
+}
+
+cite {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+}
+
+.source {
+    text-align: center;
+}
+
+
+
+/* *****************************************************************
+                          PAINT_ART
+********************************************************************/
+
+.paint-art {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 3rem;
+}
+
+article {
+    padding-bottom: 4rem;
+}
+
+.picture_oeuvre {
+    width: 25%;
+}
+
+.oeuvre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Handlee', cursive;
+}
+
+.oeuvre p {
+    margin-top: 0;
+}
+
+.img-left {
+    float: left;
+    margin-right: 1em;
+    padding-top: 2em;
+}
+
+.img-right {
+    width: 20%;
+    height: 16rem;
+    float: right;
+    margin-left: 4em;
+    margin-right: 2rem;
+    transform: rotate(90deg);
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* *****************************************************************
+                          GOLD_BOOK
+********************************************************************/
+
+.temoignage-all p {
+    text-align: center;
+    font-family: 'Handlee', cursive;
+}
+
+.temoignage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.temoignage1 {
+    border: 1px solid grey;
+    border-radius: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.temoignage1 p {
+    margin: 0;
+}
+
+/* ***Gold_Book Form*** */
+
+.form-gold-book form {
+    width: 30%;
+    background: radial-gradient(#EFE6F3, #B5A3BC);
+}
+
+.form-gold-book {
+    padding-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    height: 6rem;
+}
+
+/* *****************************************************************
+                            FOOTER
+***************************************************************** */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-bottom: 1rem;
+    background: radial-gradient(#EFE6F3, #B5A3BC);
+}
+
+.me-contacter {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    display: flex;
+    text-align: center;
+}
+
+address {
+    font-size: 1rem;
+}
+
+iframe {
+    width: 100%;
+    height: 60%;
+}
+
+i {
+    color: grey;
+}
+
+.reseaux-sociaux {
+    font-size: 1rem;
+}
+
+.box-reseaux {
+    color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+.rs-f {
+    margin-right: 1rem;
+}
+
+/* *****************************************************************
+                    FORM REGISTER, LOGIN, LOGOUT
+********************************************************************/
+
+form.box {
+    background: #1c242d;
+    border: 1px solid #c4c4c4;
+    background: white;
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 30%;
+    border-radius: 1rem;
+    background: radial-gradient(#EFE6F3, #B5A3BC);
+}
+
+h2.box-title {
+    color: grey;
+    background: #f8f8f8;
+    font-weight: 300;
+    padding: 0.938rem 1.563rem;
+    line-height: 1.875rem;
+    font-size: 1.563rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.box-input {
+    font-size: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 1.563rem;
+    padding-left: 0.625rem;
+    border-radius: 1rem;
+    width: 21.688rem;
+    height: 3.125rem;
+}
+
+.box-input:focus {
+    outline: none;
+    border-color: #5c7186;
+}
+.box-button {
+    border-radius: 0.313rem;
+    background: grey;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.188rem;
+    width: 60%;
+    height: 3.188rem;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    outline: 0;
+}
+.box-register {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.box-register a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.sucess {
+    text-align: center;
+    color: white;
+}
+
+.sucess a {
+    text-decoration: none;
+    color: #58aef7;
+}
+
+p.errorMessage {
+    background-color: #e66262;
+    border: #AA4502 1px solid;
+    padding: 0.313rem 0.625rem;
+    color: #FFFFFF;
+    border-radius: 0.188rem;
+}
+
+/* *****************************************************************
+                           RESPONSIVE
+                            Tablette
+********************************************************************/
+
+@media screen and (min-width:481px) and (max-width:960px) {
+    /* ***HOME_PAGE*** */
+    .navbar a {
+        padding: 0.313rem;
+        margin: 0.313rem;
+    }
+    .navbar ul {
+        flex-wrap: wrap-reverse;
+    }
+    li .navinscription,
+    li .naviconeCo,
+    li .naviconeDeco {
+        font-size: 1rem;
+    }
+
+
+    /* ***PRESENTATION*** */
+    .galerie-grid {
+        padding-left: 2rem;
+        width: 90%;
+        height: auto;
+    }
+
+
+    /* ***PAINT_ART*** */
+    h2 {
+        margin: 0;
+    }
+    article {
+        padding-bottom: 1rem;
+    }
+    .img-left {
+        width: 12rem;
+        height: 12rem;
+        padding: 0;
+    }
+    .img-right {
+        width: 9rem;
+        height: 13rem;
+
+    }
+
+
+    /* ***GOLD_BOOK*** */
+    .temoignage1 {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        width: 26rem;
+    }
+
+
+    /* ***FORM*** */
+    .form-gold-book form {
+        width: 50%;
+    }
+    textarea {
+        width: 7rem;
+        height: 5rem;
+    }
+
+
+    /* ***FORM REGISTER, LOGIN, LOGOUT*** */
+    form.box {
+        width: 20rem;
+        margin-left: 5rem;
+    }
+    .box-input {
+        width: 15rem;
+    }
+    h2 {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+
+/* *****************************************************************
+                           RESPONSIVE
+                             Mobile
+********************************************************************/
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    main {
+        max-width: 100%;
+    }
+    .header {
+        background: radial-gradient(#EFE6F3, #B5A3BC);
+        padding-bottom: 0.063rem;
+        padding-top: 0.063rem;
+    }
+
+
+    /* ***NAVBAR/HAMBURGER*** */
+    .navbar.active {
+        display: flex;
+        height: 100%;
+    }
+    .navbar {
+        height: 100%;
+        width: 250px;
+        /*largeur pour cacher le menu*/
+        position: fixed;
+        display: none;
+        z-index: 1;
+        /*pour que le menu passe au dessus de la page html*/
+        top: 0;
+        background-color: #e8e8e8;
+        padding-top: 2.438rem;
+        transition: left 0.5s ease;
+    }
+    .navbar a {
+        text-decoration: none;
+        font-size: 1.563rem;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .navbar a:hover {
+        color: #111;
+    }
+    .navbar ul {
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 18rem;
+    }
+    .navbar.close {
+        position: absolute;
+        top: 0;
+        right: 1.563rem;
+        font-size: 2.25rem;
+    }
+    .logo {
+        padding-top: 3rem;
+    }
+    .burger-icon span {
+        background-color: #5E7B97;
+        border-radius: 0.188rem;
+        display: block;
+        width: 2.188rem;
+        height: 0.313rem;
+        margin: 0.375rem 0;
+    }
+
+
+    /* ***HOME_PAGE*** */
+    h1 {
+        font-size: 5rem;
+    }
+
+    iframe {
+        width: 90%;
+        height: 50%;
+    }
+    .picture-homepage img {
+        height: 20rem;
+    }
+
+
+    /* ***PRESENTATION*** */
+    .galerie-grid {
+        padding-left: 3rem;
+    }
+    .art1,
+    .art2,
+    .art3,
+    .art4,
+    .art5,
+    .art6 {
+        font-size: 9px;
+    }
+
+
+    /* ***PAINT_ART*** */
+    h2 {
+        margin: 1rem;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .oeuvre {
+        align-items: center;
+    }
+    .img-left {
+        width: 24rem;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .img-right {
+        width: 13rem;
+        height: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .paint-art {
+        padding-top: 1rem;
+    }
+
+
+    /* ***GOLD_BOOK*** */
+    .temoignage1 {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .temoignage1 p {
+        font-size: 0.625rem;
+        text-overflow: clip ellipsis;
+    }
+    .form-gold-book form {
+        width: 70%;
+    }
+    .form-gold-book {
+        width: 105%;
+    }
+
+
+    /* ***FORM REGISTER, LOGIN, LOGOUT*** */
+    form.box {
+        width: 19rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box-input {
+        width: 15rem;
+    }
+}
