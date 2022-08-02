@@ -1,4 +1,11 @@
 
+<?php
+//si result exist et qu'il est différent d'une chaine de caractère vide alors on l'affiche
+if(isset($result) && $result!=''){
+	echo('<div class="messageValid"><p>'.$result.'</p></div>');
+}
+
+?>
 
 <form class="box" action="" method="post">
 	<h2 class="box-title">Register Form</h2>

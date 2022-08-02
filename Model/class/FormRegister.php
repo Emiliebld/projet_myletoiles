@@ -51,5 +51,6 @@ class FormRegister extends FormToDB {
         $this->addToDB();
         $this->clearData();
         return "Formulaire envoyé avec succès";
+        
     }
 }

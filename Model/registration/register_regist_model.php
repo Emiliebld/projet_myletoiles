@@ -1,9 +1,7 @@
-<!--requete de la table USERS-->
-
 <?php
 
 $users=new Database();
-
+$result='';
 
 if (isset($_POST['username'], $_POST['email'], $_POST['type'], $_POST['password'])){
 	// récupérer le nom d'utilisateur 
@@ -19,7 +17,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['type'], $_POST['password'
 		'email' => $_POST['email']
 	];
 	$checkEmail = $users->prepare('SELECT * FROM users WHERE email = :email',$paramsVerifEmail,true);
-	
+        
 	if($checkEmail === false){
 		$parameters = [
 			':username' => $username,
@@ -32,15 +30,17 @@ if (isset($_POST['username'], $_POST['email'], $_POST['type'], $_POST['password'
 	    $query = $users->prepare("INSERT INTO users (username, email, role_id, password, register_date)
 					  VALUES (:username, :email, :type, :password, :date)", $parameters);
 	
-		$result = true;
+		$result = 'Your account has been created, you can log in';
 	
-		header('Location: index.php?page=login');
-		exit();	
+		//header('Location: index.php?page=login');
+		//exit();	
+		
 	} else {
 		$message = "Mail or password already exist.";
 	}
 }
 ?>
+
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>
 <?php } ?>

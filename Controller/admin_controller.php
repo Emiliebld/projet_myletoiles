@@ -1,7 +1,7 @@
 <?php
 
 // model 
-require('./Model/home_admin_model.php');
+require('./Model/registration/home_admin_model.php');
 //View
 require('./View/header.phtml');
 require('./View/footer.phtml');

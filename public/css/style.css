@@ -13,9 +13,6 @@ body {
     height: auto;
     margin: 0;
     padding: 0;
-}
-
-main {
     border: 1px solid grey;
 }
 
@@ -421,6 +418,7 @@ h2.box-title {
     outline: none;
     border-color: #5c7186;
 }
+
 .box-button {
     border-radius: 0.313rem;
     background: grey;
@@ -434,6 +432,7 @@ h2.box-title {
     border: 0;
     outline: 0;
 }
+
 .box-register {
     text-align: center;
     margin-bottom: 0;
@@ -445,12 +444,12 @@ h2.box-title {
     color: #666;
 }
 
-.sucess {
+.success {
     text-align: center;
     color: white;
 }
 
-.sucess a {
+.success a {
     text-decoration: none;
     color: #58aef7;
 }
@@ -461,6 +460,20 @@ p.errorMessage {
     padding: 0.313rem 0.625rem;
     color: #FFFFFF;
     border-radius: 0.188rem;
+}
+
+.messageValid {
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    width: 70%;
+    text-align: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
 }
 
 /* *****************************************************************
