@@ -50,6 +50,7 @@ h3 {
 
 a {
     text-decoration: none;
+    color: grey;
 }
 
 .navbar a {
@@ -433,6 +434,10 @@ h2.box-title {
     outline: 0;
 }
 
+.eye {
+    
+}
+
 .box-register {
     text-align: center;
     margin-bottom: 0;
@@ -637,7 +642,7 @@ p.errorMessage {
         height: 50%;
     }
     .picture-homepage img {
-        height: 20rem;
+        height: 14rem;
     }
 
 

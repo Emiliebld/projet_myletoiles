@@ -1,20 +1,23 @@
 <form class="box" action="index.php?page=submitFormLogin" method="post" name="login">
     <h2 class="box-title">Login</h2>
     
-    <?php
+        <label for="email"></label>
+                <input type="email" class="box-input" name="email" placeholder="Email" required>
     
+        <div class="inputEye">
+        <label for="password"></label>
+            <input id="password" type="password" class="box-input" name="password" placeholder="Password" required>
+            <div id="eye">
+                <i class="fa-solid fa-eye-slash" id="logoEye"></i>
+            </div>
+        </div>
+
+            <input type="submit" value="Valid" name="submit" class="box-button">
     
-    
-    
-    
-    ?>
-    
-    <input type="email" class="box-input" name="email" placeholder="Email" required />
-    <input type="password" class="box-input" name="password" placeholder="Password">
-    <input type="submit" value="Valid" name="submit" class="box-button">
-    
-    <p class="box-register">
-        Vous êtes nouveau ici? 
-        <a href="index.php?page=register">S'inscrire</a>
-    </p>
+           <p class="box-register">
+            Vous êtes nouveau ici? 
+                <a href="index.php?page=register">S'inscrire</a>
+           </p>
 </form>
+
+

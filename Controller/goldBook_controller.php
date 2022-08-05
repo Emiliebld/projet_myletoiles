@@ -39,7 +39,7 @@ if(isset($_POST) && !empty($_POST)) {
 }
 
 $list_message = $db->prepare('SELECT livredor.message,livredor.date_message,users.id,users.username FROM livredor 
-                             INNER JOIN users ON users.id=livredor.users_id ORDER BY date_message DESC LIMIT 15'); 
+                             INNER JOIN users ON users.id=livredor.users_id ORDER BY date_message DESC LIMIT 10'); 
 $list_message->execute();
 $livredor = $list_message->fetchAll(PDO::FETCH_ASSOC);
 
