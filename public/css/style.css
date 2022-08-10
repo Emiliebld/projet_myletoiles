@@ -234,7 +234,21 @@ cite {
 .paint-art {
     margin-left: 1rem;
     margin-right: 1rem;
-    padding-top: 3rem;
+    padding-top: 1rem;
+}
+
+.search {
+    text-align: center;
+}
+
+.search input {
+    width: 35%;
+    height:1.5rem;
+    border: white;
+    border-radius: 1rem;
+    background-color: #DBD1E4;
+    margin-bottom: 1rem;
+    
 }
 
 article {
@@ -434,9 +448,7 @@ h2.box-title {
     outline: 0;
 }
 
-.eye {
-    
-}
+.eye {}
 
 .box-register {
     text-align: center;

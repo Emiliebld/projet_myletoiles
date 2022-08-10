@@ -1,20 +1,4 @@
-
-
-
-<body>
-    
-    
-    <main class="paint-art">
-    	
-    	<div class="search">
-    		<i class="fa-solid fa-magnifying-glass"></i>
-    		<input type="text" id="search" placeholder="Search"> <!-- Notre champ de recherche avec un id-->
-    	</div>
-        <div id="target">  <!-- Notre div avec un id dans laquelle nous afficherons le résultat -->
-    	
-    	
-    	<!--boucle foreach pour boucler sur la liste des oeuvres et les afficher-->
-    	<?php $i=1; ?>
+<?php $i=1; ?>
     	<?php foreach($oeuvres as $oeuvre):?>
     	
     	
@@ -35,11 +19,7 @@
 			$i=1;
 		}?>
     	<?php endforeach;?>
-    	
-    	</div>
-	</main>
-    
-    
-    
-    
-    
+
+        <p>J'ai trouvé <?= $numberOfArticles ?> article(s) correspondant à votre recherche</p>
+        
+        

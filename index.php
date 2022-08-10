@@ -3,6 +3,10 @@
 <?php
 //session_start();
 
+spl_autoload_register(function($class) {
+    require_once lcfirst(str_replace('\\','/', $class)) . '.php';
+});
+
 if(isset($_GET['page'])){
     if($_GET['page'] === 'home'){
         require('Controller/home_controller.php');

@@ -18,7 +18,12 @@ if(isset($result) && $result!=''){
 				<option value="2">User</option>
 			</select>
 	</div>
-    <input type="password" class="box-input" name="password" placeholder="Password" required />
+	 <div class="inputEye">
+        <label for="password"></label>
+            <input id="password" type="password" class="box-input" name="password" placeholder="Password" required>
+                <i class="fa-solid fa-eye-slash" id="logoEye"></i>
+        </div>
+    
     <input type="submit" name="submit" value="valid" class="box-button" />
     
     <p class="box-register">Déjà inscrit? 
