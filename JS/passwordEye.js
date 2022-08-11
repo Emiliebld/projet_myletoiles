@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.querySelector("#password") !== null) {
         //!==null : car il n'apparait pas dans les autres pages
         input = document.getElementById('password');
+        
     }
     if (document.querySelector("#eye") !== null) {
         document.getElementById('eye').addEventListener('click', openEye);

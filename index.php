@@ -7,6 +7,15 @@ spl_autoload_register(function($class) {
     require_once lcfirst(str_replace('\\','/', $class)) . '.php';
 });
 
+//if(array_key_exists('page', $_GET)) :
+ //    switch($_GET['page']) {
+         
+         
+         
+         
+         
+ //    }
+
 if(isset($_GET['page'])){
     if($_GET['page'] === 'home'){
         require('Controller/home_controller.php');

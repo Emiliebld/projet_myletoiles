@@ -243,12 +243,12 @@ cite {
 
 .search input {
     width: 35%;
-    height:1.5rem;
+    height: 1.5rem;
     border: white;
     border-radius: 1rem;
     background-color: #DBD1E4;
     margin-bottom: 1rem;
-    
+
 }
 
 article {
@@ -448,7 +448,18 @@ h2.box-title {
     outline: 0;
 }
 
-.eye {}
+.input-group .box-input {
+    width: 12.5rem;
+}
+
+.inputEye {
+    display: flex;
+    width: 21.688rem;
+}
+
+#eye {
+    margin-top: 1rem;
+}
 
 .box-register {
     text-align: center;
@@ -570,6 +581,15 @@ p.errorMessage {
     h2 {
         margin-bottom: 1rem;
         margin-top: 1rem;
+    }
+    .inputEye {
+        width: auto;
+    }
+    .inputEye input {
+        width: 13.75rem;
+    }
+    .input-group .box-input {
+        width: 15rem;
     }
 }
 
