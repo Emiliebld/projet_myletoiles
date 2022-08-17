@@ -16,23 +16,20 @@ class HomeController{
         //vérifier que le mail existe dans la base de données
         //vérifier que le MDP soit bon 
         //admin numéri 1
+
         if (isset($_POST['email'])){
-            $login = new Database();
+            $model = new \Models\UsersModel();
             $email = htmlentities($_POST['email']);
-            $_SESSION['email'] = $email;
-            $password = htmlentities(password_hash($_POST['password'], PASSWORD_DEFAULT));
-  
-            $parameters = [
-		            'email' => $email,
-	            ];
-            $query = $login->prepare ("SELECT * FROM users WHERE email = :email",$parameters,true);
+            $result = $model -> getUserByEmail($email);
   
 
-        if(password_verify($_POST['password'] ,$query['password'])){
-            $_SESSION['username'] = $query['username'];
-            $_SESSION['role_id'] = $query['role_id'];
-            $_SESSION['logged']=true;
-            $_SESSION['id']=$query['id'];
+        if(password_verify($_POST['password'] ,$result['password']) && $result['role_id']==1){
+            
+            $_SESSION['admin'] = [ 
+                                    'id' => $result['id'], 
+                                    'userName' => $result['userName'], 
+                                    'email' => $result['email']
+            ];
     
             header('location: index.php?page=home');
             exit();

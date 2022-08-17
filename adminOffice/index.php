@@ -17,18 +17,22 @@ if(array_key_exists('page', $_GET)) :
 
     switch($_GET['page']) {
 
-        // ------- AFFICHAGE DE LA PAGE D'ACCUEIL DE NOTRE SITE AVEC TOUS LES ARTICLES ------- //
+        // ------- AFFICHAGE DE LA PAGE D'ACCUEIL DE NOTRE SITE AVEC LE FORM ------- //
         case 'home':
             // On va instancier notre HomeController et pas conséquent, notre autoloader s'exécute.
             $controller = new Controllers\HomeController();
-            // Appel de notre méthode "displayAllArticle()" pour afficher la page d'accueil avec tous les articles.
+            // Appel de notre méthode "displayFormConnect()" pour afficher la page d'accueil avec tous les articles.
             $controller->displayFormConnect();
         break;
 
         case 'submitFormLogin':
-            $controller = new Controllers\FormLoginController();
-            $controller->displayFormLogin();
+            $controller = new Controllers\HomeController();
+            $controller->submitFormLogin();
         break;
+
+
+
+
 
         // ------- AFFICHAGE DES DETAILS DE L'ARTICLE SELECTIONNE VIA SON ID ------- //
         case 'detailsOfOneArticle':
@@ -55,6 +59,9 @@ if(array_key_exists('page', $_GET)) :
             $controller = new Controllers\ArticleController();
             $controller->verifAddArticle();
         break;
+
+
+
 
 
         // ------- PAGE DES UTILISATEURS: AFFICHE TOUS LES UTILISATEURS ------- //
