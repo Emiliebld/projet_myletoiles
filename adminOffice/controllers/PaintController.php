@@ -13,17 +13,17 @@ namespace Controllers;
 // * Déconnexion de l'utilisateur
 // ...
 
-class UsersController {
+class PaintController {
 
     // Méthode permettant d'afficher la liste de tous les utilisateurs
-    public function displayAllUsers() {
-        $model = new \Models\UsersModel();
-        $users = $model->getAllUsers();
+    public function displayAllPaint() {
+        $model = new \Models\PaintModel();
+        $oeuvre = $model->getAllPaint();
 
-var_dump($users);
+var_dump($oeuvre);
 
         require_once("views/headerOffice.phtml");
-        require_once("views/usersOffice.phtml");
+        require_once("views/PaintOffice.phtml");
         require_once("views/footerOffice.phtml");
     }
 

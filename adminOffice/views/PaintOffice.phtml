@@ -1,0 +1,14 @@
+<p>Voici la liste des oeuvres sur le site!</p>
+<p>Boucle foreach à réaliser</p>
+
+<?php foreach ($oeuvre as $paint):?>
+
+    <h3><?=htmlspecialchars($paint["id"])?></h3>
+    <p><?=htmlspecialchars($paint["title"])?></p>
+    <p><?=htmlspecialchars($paint["name_image"])?></p>
+    <p><?=htmlspecialchars($paint["description"])?></p>
+    <p><?=htmlspecialchars($paint["date_paint"])?></p>
+
+
+
+<?php endforeach;?>

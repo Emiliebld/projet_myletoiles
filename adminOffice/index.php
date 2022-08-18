@@ -29,6 +29,27 @@ if(array_key_exists('page', $_GET)) :
             $controller = new Controllers\HomeController();
             $controller->submitFormLogin();
         break;
+        
+        
+        case 'accueil':
+            $controller = new Controllers\HomeController();
+            $controller->displayAccueil();
+        break;
+        
+        case 'users':
+            $controller = new Controllers\UsersController();
+            $controller->displayAllUsers();
+        break;
+        
+        case 'paint':
+            $controller = new Controllers\PaintController();
+            $controller->displayAllPaint();
+        break;
+        
+        case 'messages':
+            $controller = new Controllers\LivredorController();
+            $controller->displayAllComments();
+        break;
 
 
 

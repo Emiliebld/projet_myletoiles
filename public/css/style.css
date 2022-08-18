@@ -569,13 +569,21 @@ p.errorMessage {
     }
 
 
-    /* ***FORM REGISTER, LOGIN, LOGOUT*** */
+    /* ***FORM USERS*** */
     form.box {
-        width: 20rem;
+        width: 70%;
         margin-left: 5rem;
     }
     .box-input {
-        width: 15rem;
+
+        font-size: 1rem;
+        background: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 1.563rem;
+        padding-left: 0.625rem;
+        border-radius: 1rem;
+        width: 17.688rem;
+        height: 3.125rem;
     }
     h2 {
         margin-bottom: 1rem;
@@ -585,7 +593,7 @@ p.errorMessage {
         width: auto;
     }
     .inputEye input {
-        width: 13.75rem;
+        width: 15.75rem;
     }
     .input-group .box-input {
         width: 15rem;
@@ -741,11 +749,14 @@ p.errorMessage {
 
     /* ***FORM REGISTER, LOGIN, LOGOUT*** */
     form.box {
-        width: 19rem;
+        width: 18rem;
         margin-left: auto;
         margin-right: auto;
     }
     .box-input {
         width: 15rem;
+    }
+    .inputEye {
+        margin-left: 6rem;
     }
 }

@@ -1,0 +1,14 @@
+<p>Voici la liste des utilisateurs ayant un compte sur le site!</p>
+<p>Boucle foreach à réaliser</p>
+
+<?php foreach ($users as $user):?>
+
+    <h3><?=htmlspecialchars($user["username"])?></h3>
+    <p><?=htmlspecialchars($user["email"])?></p>
+    <p><?=htmlspecialchars($user["role_id"])?></p>
+    <p><?=htmlspecialchars($user["register_date"])?></p>
+
+
+
+<?php endforeach;?>
+    

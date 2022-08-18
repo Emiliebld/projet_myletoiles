@@ -17,7 +17,7 @@ if(isset($_POST) && !empty($_POST)) {
         //$errors[]="Veuillez remplir votre prénom";
     //}
     if(empty ($_POST["msg"])){
-        $errors[]="Veuillez remplir votre message";
+        $errors[]="Veuillez écrire votre message";
     }
 
     //filter_var permet de s'assurer que le text envoyé est au format email

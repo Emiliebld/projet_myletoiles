@@ -28,7 +28,7 @@ class FormLogin extends FormToDB {
             if(password_verify($passwordFromInput,$this->userData['password'])){
                 return true;
             } else {
-                $message = "Mot de pass incorrect !";
+                $message = "Mot de passe incorrect !";
                 $this->createError('email', $message);
                 $this->createError('password', $message);
                 return false;

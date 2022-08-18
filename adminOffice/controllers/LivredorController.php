@@ -2,28 +2,17 @@
 
 namespace Controllers;
 
-// Notre UsersController va nous permettre de gérer tout ce qui touche à l'utilisateur
-// * Affichage des utilisateurs
-// * Affichage d'un utilisateur précis
-// * Création d'un compte
-// * Modification d'un compte
-// * Suspension / Suppression d'un compte
-// * Affichage du formulaire de connexion de l'utilisateur
-// * Soumission du formulaire de connexion de l'utilisateur
-// * Déconnexion de l'utilisateur
-// ...
-
-class UsersController {
+class LivredorController {
 
     // Méthode permettant d'afficher la liste de tous les utilisateurs
-    public function displayAllUsers() {
-        $model = new \Models\UsersModel();
-        $users = $model->getAllUsers();
+    public function displayAllComments() {
+        $model = new \Models\LivredorModel();
+        $livredor = $model->getAllComments();
 
-var_dump($users);
+var_dump($livredor);
 
         require_once("views/headerOffice.phtml");
-        require_once("views/usersOffice.phtml");
+        require_once("views/livredorOffice.phtml");
         require_once("views/footerOffice.phtml");
     }
 

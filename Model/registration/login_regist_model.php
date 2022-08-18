@@ -24,7 +24,7 @@ if (isset($_POST['email'])){
       header('location: index.php?page=home');
       exit();
   } else {
-    $message = "Username or Password is incorrect.";
+    $message = "Nom d'utilisateur ou Mot de passe incorrect!.";
   }
 }
 

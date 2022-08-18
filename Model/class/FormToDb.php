@@ -119,7 +119,7 @@ class FormToDB extends Database {
                             $this->createError($name, $message);
                         }
                     } else {
-                        $message = " Votre fichier depasse les ". ($size/1000000) . "mo !";
+                        $message = " Votre fichier dépasse les ". ($size/1000000) . "mo !";
                         $this->createError($name, $message);
                     }
                 }
@@ -381,7 +381,7 @@ class FormToDB extends Database {
     protected function success()
     {
         $this->clearData();
-        return "Formulaire envoyer avec succes";
+        return "Formulaire envoyer avec succès";
     }
     
     // vérifie s'il y a des erreurs dans les inputs

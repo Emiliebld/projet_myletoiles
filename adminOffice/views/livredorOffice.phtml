@@ -1,0 +1,12 @@
+<p>Voici la liste des messages reçus!</p>
+<p>Boucle foreach à réaliser</p>
+
+<?php foreach ($livredor as $message):?>
+
+    <h3><?=htmlspecialchars($message["message"])?></h3>
+    <p><?=htmlspecialchars($message["date_message"])?></p>
+    <p><?=htmlspecialchars($message["users_id"])?></p>
+
+
+
+<?php endforeach;?>

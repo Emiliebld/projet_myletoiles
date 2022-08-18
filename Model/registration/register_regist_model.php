@@ -30,13 +30,13 @@ if (isset($_POST['username'], $_POST['email'], $_POST['type'], $_POST['password'
 	    $query = $users->prepare("INSERT INTO users (username, email, role_id, password, register_date)
 					  VALUES (:username, :email, :type, :password, :date)", $parameters);
 	
-		$result = 'Your account has been created, you can log in';
+		$result = 'Votre compte a bien été créé, vous pouvez vous connecter!';
 	
 		//header('Location: index.php?page=login');
 		//exit();	
 		
 	} else {
-		$message = "Mail or password already exist.";
+		$message = "Votre email ou mot de passe existe déjà!";
 	}
 }
 ?>

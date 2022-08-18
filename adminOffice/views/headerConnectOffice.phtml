@@ -28,32 +28,5 @@
 
     <header class="header">
             
-            <?php if (isset($_SESSION['admin'])):?>
             
-            <nav id="mySidenav"class="navbar">
-                <a id="closeBtn" href="#" class="close">×</a>
-                <ul>
-                    <li><a class="nav" href="index.php?page=users">Utilisateurs</a></li>
-                    <li><a class="nav" href="index.php?page=paint">Peintures</a></li>
-                    <li><a class="nav" href="index.php?page=messages">Messages livre d'or</a></li>
-                    
-                <div class="logo">
-                    <li><a title="logout" class="naviconeDeco" href="index.php?page=logout">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        </a>
-                    </li>
-                </div>
-                </ul>
-            </nav>
-
-        <a href="#" id="openBtn">
-          <span class="burger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </a>
-        
-        <?php else: ?>
-        <?php endif;?>
     </header>

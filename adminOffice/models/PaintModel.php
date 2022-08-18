@@ -13,17 +13,17 @@ namespace Models;
 
 // Notre model extends lui aussi de la Database.
 
-class UsersModel extends Database {
+class PaintModel extends Database {
 
-    public function getAllUsers() {
-        $req = "SELECT * FROM users ORDER BY id DESC";
+    public function getAllPaint() {
+        $req = "SELECT * FROM oeuvres ORDER BY id DESC";
         return $this ->findAll($req);
     }
     
-    public function getUserByEmail($email) {
+    //public function getUserByEmail($email) {
        
-        return $this ->getOneByEmail("users", $email);
-    }
+       // return $this ->getOneByEmail("users", $email);
+    //}
 
     // ...
 }
