@@ -1,14 +1,27 @@
-<p>Voici la liste des oeuvres sur le site!</p>
-<p>Boucle foreach à réaliser</p>
+<div class="backoffice">
 
-<?php foreach ($oeuvre as $paint):?>
+    <h2>Voici la liste des oeuvres exposées sur le site!</h2>
 
-    <h3><?=htmlspecialchars($paint["id"])?></h3>
-    <p><?=htmlspecialchars($paint["title"])?></p>
-    <p><?=htmlspecialchars($paint["name_image"])?></p>
-    <p><?=htmlspecialchars($paint["description"])?></p>
-    <p><?=htmlspecialchars($paint["date_paint"])?></p>
+<table class="backofficePaint">
+    
+    <?php foreach ($oeuvre as $paint):?>
 
-
-
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td><?=htmlspecialchars($paint["id"])?></td>
+            <td><?=htmlspecialchars($paint["title"])?></td>
+            <td><?=htmlspecialchars($paint["name_image"])?></td>
+            <td><?=htmlspecialchars($paint["description"])?></td>
+            <td><?=htmlspecialchars($paint["date_paint"])?></td>
+        </tr>
+    
 <?php endforeach;?>
+
+</table>
+</div>

@@ -10,7 +10,7 @@ class Database {
 
     //elle se connecte à la bdd
     public function __construct() {
-        $this->bdd = new \PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
+        $this->bdd = new \PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=UTF8', DB_USER, DB_PASS);
     }
 
     protected function findAll($req, $params = []) {

@@ -1,5 +1,37 @@
 /*darkmode->mal voyant*/
 
+/*Backoffice CSS*/
+
+.backoffice h2 {
+    display: flex;
+    justify-content: center;
+    color: grey;
+    text-decoration: underline;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+}
+
+.backofficeUsers {
+    margin: 5rem;
+}
+
+.backofficePaint {
+    margin: 5rem;
+}
+
+.backofficeLivredor {
+    margin: 5rem;
+}
+
+.backofficeUsers tr {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* *****************************************************************
                           GENERALITIES
 ********************************************************************/
@@ -120,6 +152,7 @@ a.close {
 img {
     max-width: 100%;
     height: auto;
+    display:block;
 }
 
 .picture-homepage {
@@ -487,7 +520,12 @@ p.errorMessage {
     padding: 0.313rem 0.625rem;
     color: #FFFFFF;
     border-radius: 0.188rem;
+    animation: clignote 2s linear infinite;
 }
+
+/*@keyframes p.errorMessage {  
+  50% { opacity: 0; }
+}*/
 
 .messageValid {
     background-color: green;
@@ -501,7 +539,12 @@ p.errorMessage {
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2rem;
+    animation: clignote 2s linear infinite;
 }
+
+/*@keyframes .messageValid {  
+  50% { opacity: 0; }
+}*/
 
 /* *****************************************************************
                            RESPONSIVE

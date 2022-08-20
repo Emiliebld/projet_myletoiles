@@ -5,7 +5,7 @@ class Message extends database {
     
     protected function AllMessages()
     {
-        /*DESC pour l'affichage des messages en décroissant selon la date*/
+        /*DESC = display messages to date message*/
             $query = $this->prepare('SELECT * FROM livredor ORDER BY date_paint DESC 
                                     INNER JOIN user ON users.id LIMIT 15');
             return $query;

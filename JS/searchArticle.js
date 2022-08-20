@@ -6,24 +6,25 @@ if (document.querySelector("#search") !== null) {
 
     input.addEventListener('keyup', () => { // Ecoute d'évènement au keyup
 
-        // Récupérer le text tapé dans l'input par l'utilisateur
+        // Take the Input Text by user
         let textFind = document.querySelector('#search').value;
 
-        // Faire un objet de type request
+        // To do an object : type request
         let myRequest = new Request('Model/class/searchArticle.php', {
             method: 'POST',
             body: JSON.stringify({ textToFind: textFind })
         })
-        // On attend la réponse du fichier searchArticle.php
+        //We wait the answer of searchArticle.php
 
         fetch(myRequest)
-            // Récupère les données
+            // Récup data
             .then(res => res.text())
 
-            // Exploite les données
+            // Exploit data
             .then(res => {
                 document.getElementById("target").innerHTML = res;
-                // On met search_article.phtml dans la div -> id=target
+                // search_article.phtml in div -> id=target
+                //on mets search.phtml dans la div
 
             })
     })

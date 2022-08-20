@@ -3,7 +3,7 @@
         <p>Parce qu'un retour de votre part fait toujours plaisir,</br>je t'invite à poster ici ton âme d'artiste...</p>
     
         <div class="temoignage">
-            <!--boucle foreach pour boucler sur les messages et les afficher-->
+            <!--boucle foreach for looping messages and display them-->
             <?php foreach($livredor as $message):?>
             
             <pre class="temoignage1">
@@ -23,7 +23,7 @@
                 <fieldset>
                     <legend>Login</legend>
                     <?php
-                        //si le tableau d'erreur existe et qu'il n'est pas vide, alors on va boucler sur les erreurs pour les afficher une par une
+                        //If error table exist an sis not empty -> looping to errors to display one by one
                         if(isset($errors) && count($errors)>0){
                             foreach ($errors as $error){
                                 echo $error."</br>";

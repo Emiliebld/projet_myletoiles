@@ -17,12 +17,12 @@ class HomeController{
     }
     
     
-    //pour accéder au backoffice la personne doit etre admin :
+    //to acces backoffice, user must be admin :
     public function submitFormLogin(){
-        //vérifier que le formulaire soit bien rempli
-        //vérifier que le mail existe dans la base de données
-        //vérifier que le MDP soit bon 
-        //admin numéri 1
+        //check form
+        //check email exist in database
+        //check good password
+        //admin number 1
 
         if (isset($_POST['email'])){
             $model = new \Models\UsersModel();

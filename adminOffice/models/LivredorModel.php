@@ -2,16 +2,16 @@
 
 namespace Models;
 
-// Notre model Users va nous permettre de stocker toutes nos méthodes permettant de réaliser des requêtes
-// SQL liées aux utilisateurs
+// modelLivredor stock méthodes to realise requêtes
+// SQL messages
 // * Rechercher tous les utilisateurs
-// * Rechercher un utilisateur via son id
-// * Ajouter un utilisateur
-// * Modifier un utilisateur
-// * Supprimer un utilisateur
+// * search messages
+// * Add messages
+// * Modif messages
+// * Sup messages
 //...
 
-// Notre model extends lui aussi de la Database.
+// model extends by Database.
 
 class LivredorModel extends Database {
 
@@ -19,11 +19,4 @@ class LivredorModel extends Database {
         $req = "SELECT * FROM livredor ORDER BY id DESC";
         return $this ->findAll($req);
     }
-    
-    //public function getUserByEmail($email) {
-       
-       // return $this ->getOneByEmail("users", $email);
-    //}
-
-    // ...
 }

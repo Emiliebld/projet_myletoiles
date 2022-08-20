@@ -1,9 +1,9 @@
 <?php
 
 
-	// Initialiser la session
+	// Initial session
 	session_start();
-	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+	// Verify if user is connected, elseif redirection connect page
 	if(!isset($_SESSION["users"])){
 		header("Location: login.php");
 		exit(); 

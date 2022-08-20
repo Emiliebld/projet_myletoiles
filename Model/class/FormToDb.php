@@ -64,9 +64,9 @@ class FormToDB extends Database {
         $this->input = $inputFormated;
     }
 
-    // function qui permet 
-    // soit de generer et d'afficher le formulaire
-    // soit d'executer la function de success
+    // function : 
+    // or genere display form
+    // or execut function success
     public function formulaire(){
         $this->updateInputStructure();
         $this->clearError();

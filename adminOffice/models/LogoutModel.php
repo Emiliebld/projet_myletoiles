@@ -1,15 +1,15 @@
 <?php
 
 
-	// Initialiser la session
+	// Initial  session
 	session_start();
 	//setcookie('pseudo','',time()-10);
 	//setcookie('date','',time()-10);
 	
-	// Détruire la session.
+	// Destroy la session.
 	session_destroy();
 	
-		// Redirection vers la page de connexion
+		// Redirection to the home page
 		header("Location: index.php?page=home");
 	//exit();
 

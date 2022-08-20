@@ -1,12 +1,23 @@
-<p>Voici la liste des messages reçus!</p>
-<p>Boucle foreach à réaliser</p>
+<div class="backoffice">
 
-<?php foreach ($livredor as $message):?>
+    <h2>Voici la liste des messages reçus!</h2>
 
-    <h3><?=htmlspecialchars($message["message"])?></h3>
-    <p><?=htmlspecialchars($message["date_message"])?></p>
-    <p><?=htmlspecialchars($message["users_id"])?></p>
+<table class="backofficeLivredor">
+    
+    <?php foreach ($livredor as $message):?>
 
-
-
-<?php endforeach;?>
+        <tr>
+            <th>Utilisateur</th>
+            <th>Message</th>
+            <th>Date d'envoi</th>
+        </tr>
+        <tr>
+            <td><?=htmlspecialchars($message["users_id"])?></td>
+            <td><?=htmlspecialchars($message["message"])?></td>
+            <td><?=htmlspecialchars($message["date_message"])?></td>
+        </tr>
+    
+    <?php endforeach;?>
+    
+</table>
+</div>

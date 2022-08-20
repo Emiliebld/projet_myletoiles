@@ -1,14 +1,27 @@
-<p>Voici la liste des utilisateurs ayant un compte sur le site!</p>
-<p>Boucle foreach à réaliser</p>
+<div class="backoffice">
 
-<?php foreach ($users as $user):?>
-
-    <h3><?=htmlspecialchars($user["username"])?></h3>
-    <p><?=htmlspecialchars($user["email"])?></p>
-    <p><?=htmlspecialchars($user["role_id"])?></p>
-    <p><?=htmlspecialchars($user["register_date"])?></p>
-
-
-
-<?php endforeach;?>
+    <h2>Voici la liste des utilisateurs ayant un compte sur le site!</h2>
     
+<table class="backofficeUsers">
+    
+    <?php foreach ($users as $user):?>
+    
+    <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Type/role</th>
+        <th>Date enregistrement</th>
+    </tr>
+    <tr>
+        <td><?=htmlspecialchars($user["username"])?></td>
+        <td><?=htmlspecialchars($user["email"])?></td>
+        <td><?=htmlspecialchars($user["role_id"])?></td>
+        <td><?=htmlspecialchars($user["register_date"])?></td>
+    </tr>
+    
+<?php endforeach;?>
+
+</table>
+</div>
+
+

@@ -12,19 +12,11 @@ $db = new PDO(
 if(isset($_POST) && !empty($_POST)) {
     
 
-// Vérification du bon remplissage du formulaire
-    //if(empty ($_POST["firstname"])){
-        //$errors[]="Veuillez remplir votre prénom";
-    //}
     if(empty ($_POST["msg"])){
         $errors[]="Veuillez écrire votre message";
     }
-
-    //filter_var permet de s'assurer que le text envoyé est au format email
-    //if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
-        //$errors[] = 'Veuillez renseigner un email valide SVP !';
         
-        //si le tableau d'erreur est vide alors on enregistre le message 
+        //If error table is empty -> register message 
         if(count($errors)==0){
             $parameters = [
 			'msg' => $_POST["msg"],

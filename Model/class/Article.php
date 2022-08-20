@@ -5,7 +5,7 @@ class Article extends database {
     
     protected function AllArticles()
     {
-        /*DESC pour l'affichage des peinture en décroissant selon la date*/
+        /*DESC = display paint to date paint*/
             $query = $this->prepare('SELECT * FROM oeuvres ORDER BY date_paint DESC LIMIT 50');
             return $query;
     }

@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    //DOM : chargement du html,se déclenche lorsque le contenu DOM est chargé, 
+    //DOM : loading html,se déclenche lorsque le contenu DOM est chargé, 
     //sans attendre la fin du chargement des images et des feuilles de style.
 
     let input;
     let logoEye;
 
     if (document.querySelector("#password") !== null) {
-        //!==null : car il n'apparait pas dans les autres pages
+        //!==null : it does not appear in the other pages
         input = document.getElementById('password');
-        
+
     }
     if (document.querySelector("#eye") !== null) {
         document.getElementById('eye').addEventListener('click', openEye);

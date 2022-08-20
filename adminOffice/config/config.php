@@ -1,8 +1,5 @@
 <?php
 
-/**
- * @var string chaine de caractère correspondant au titre du site
- */
 const TITLEPAGE = 'Mylétoiles';
 
 define("DB_HOST", 'db.3wa.io');

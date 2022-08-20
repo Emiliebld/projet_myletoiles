@@ -4,13 +4,13 @@ $users=new Database();
 $result='';
 
 if (isset($_POST['username'], $_POST['email'], $_POST['type'], $_POST['password'])){
-	// récupérer le nom d'utilisateur 
+	// take username
 	$username = htmlentities($_POST['username']);
-	// récupérer l'email 
+	// take email 
 	$email = htmlentities($_POST['email']);
-	// récupérer le mot de passe 
+	// take password
 	$password = htmlentities(password_hash($_POST['password'], PASSWORD_DEFAULT));
-	// récupérer le type (user | admin)
+	// take type (user | admin)
 	$type = htmlentities($_POST['type']);
 	
 	$paramsVerifEmail = [

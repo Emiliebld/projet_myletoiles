@@ -1,11 +1,11 @@
 <?php
-//utiliser un database avec construct
+//use a Database with Construct
         const DB_DSN = 'mysql:host=db.3wa.io;port=3306;dbname=emiliebillaud_projetMyletoiles;charset=utf8'; // DSN pour PDO
         const DB_USER = 'emiliebillaud'; // User Mysql
         const DB_PASS = 'd6b5a481fcd94bf05c57bd0385fa8e5c'; // password Mysql
 
 
-        // Récupérer ce que JS nous a envoyé
+        // take what JS sent us
         $content = file_get_contents("php://input");
         $data = json_decode($content, true);
 
