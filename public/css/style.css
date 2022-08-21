@@ -1,37 +1,3 @@
-/*darkmode->mal voyant*/
-
-/*Backoffice CSS*/
-
-.backoffice h2 {
-    display: flex;
-    justify-content: center;
-    color: grey;
-    text-decoration: underline;
-}
-
-table {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid grey;
-}
-
-.backofficeUsers {
-    margin: 5rem;
-}
-
-.backofficePaint {
-    margin: 5rem;
-}
-
-.backofficeLivredor {
-    margin: 5rem;
-}
-
-.backofficeUsers tr {
-    display: flex;
-    justify-content: space-around;
-}
-
 /* *****************************************************************
                           GENERALITIES
 ********************************************************************/
@@ -152,7 +118,7 @@ a.close {
 img {
     max-width: 100%;
     height: auto;
-    display:block;
+    display: block;
 }
 
 .picture-homepage {

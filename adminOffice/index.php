@@ -3,25 +3,23 @@
 session_start();
 
 
-// Dans un premier temps, on va utiliser un AUTOLOAD.
-// L'autoloader va inclure automatiquement les fichiers dès l'instant où l'on instancie un controller / model
-// Par exemple, dès que vous allez écrire : $controller = new Controllers\HomeController();
-// L'autoloader va alors générer la phrase suivante et l'exécuter : require_once 'controllers/HomeController.php';
+// First time we used AUTOLOAD.
+// AUTOLOAD included documents when controller / model instanciation
+
 spl_autoload_register(function($class) {
     require_once lcfirst(str_replace('\\','/', $class)) . '.php';
 });
 
-// Ainsi, nous n'aurons plus à nous préocuper des fichiers à requérir, notre autoload le fait pour nous !
 
 if(array_key_exists('page', $_GET)) :
 
     switch($_GET['page']) {
 
-        // ------- AFFICHAGE DE LA PAGE D'ACCUEIL DE NOTRE SITE AVEC LE FORM ------- //
+        // ------- display formConnect ------- //
         case 'home':
-            // On va instancier notre HomeController et pas conséquent, notre autoloader s'exécute.
+            // We instantiate HomeController, and execute autoloader.
             $controller = new Controllers\HomeController();
-            // Appel de notre méthode "displayFormConnect()" pour afficher la page d'accueil avec tous les articles.
+            // Call "displayFormConnect()" methode to displaypour home page.
             $controller->displayFormConnect();
         break;
 
