@@ -1,10 +1,11 @@
 'use strict';
 
 if (document.querySelector("#search") !== null) {
+    //select input id search
 
     let input = document.querySelector("#search");
 
-    input.addEventListener('keyup', () => { // Ecoute d'évènement au keyup
+    input.addEventListener('keyup', () => { // EventListener keyup
 
         // Take the Input Text by user
         let textFind = document.querySelector('#search').value;
@@ -16,6 +17,8 @@ if (document.querySelector("#search") !== null) {
         })
         //We wait the answer of searchArticle.php
 
+
+
         fetch(myRequest)
             // Récup data
             .then(res => res.text())
@@ -24,8 +27,6 @@ if (document.querySelector("#search") !== null) {
             .then(res => {
                 document.getElementById("target").innerHTML = res;
                 // search_article.phtml in div -> id=target
-                //on mets search.phtml dans la div
-
             })
     })
 }
